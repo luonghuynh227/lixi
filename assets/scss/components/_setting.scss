@@ -1,0 +1,104 @@
+.box-setting {
+	width: 98%;
+	max-width: 708px;
+	background: #f9eddd;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border: 3px solid #400903;
+	position: fixed;
+	bottom: -500px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
+.arrow-setting {
+	cursor: pointer;
+  width: 109px;
+  height: 35px;
+  background: url(../images/bg-arrow.png) center center/contain no-repeat;
+  position: absolute;
+  right: 0;
+  top: -34px;
+  @include devices(768) {
+    width: 129px;
+		height: 45px;
+		top: -43px;
+  }
+  &.open {
+  	&:after {
+	    transform: translate(-50%, -50%);
+  	}
+  }
+  &:after {
+  	position: absolute;
+  	content: '';
+  	width: 25px;
+  	height: 21px;
+  	background: url(../images/icon-arrow-down.png) center center / contain no-repeat;
+  	left: 50%;
+	  top: 50%;
+	  transform: translate(-50%, -50%) rotate(180deg);
+	  @include devices(768) {
+	    width: 30px;
+	  }
+  }
+}
+
+.main-setting {
+	padding: 10px 5px;
+	@include devices(768) {
+    padding: 20px 10px;
+  }
+	
+	.txt-guide {
+    margin-bottom: 15px;
+		color: #672a03;
+		font-size: 22px;
+		@include devices(768) {
+	    font-size: 35px;
+	  }
+	}
+}
+.btn-setting {
+	cursor: pointer;
+	font-size: 20px;
+	@include devices(375) {
+    font-size: 22px;
+  }
+  @include devices(768) {
+    font-size: 32px;
+  }
+	
+}
+
+.list-btn-setting {
+	text-align: center;
+	li {
+    margin: 5px 2px;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    line-height: 35px;
+    background: url(../images/bg-btn-choise.png) center center / contain no-repeat;
+    filter: grayscale(0.5);
+    &.active, &:hover {
+    	filter: grayscale(0);
+    	.btn-setting {
+    		color: #ffd633;
+    	}
+    }
+    @include devices(375) {
+      width: 110px;
+    	height: 45px;
+    	line-height: 45px;
+	  }
+	  @include devices(768) {
+	    margin: 10px 2px;
+			width: 161px;
+	    height: 60px;
+			line-height: 55px;
+	  }
+    
+		
+	}
+}

@@ -1,0 +1,144 @@
+.popup {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    .content-popup {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9;
+    }
+    .wrapper-popup {
+      width: 320px;
+      height:  350px;
+      background: #f9eddd;
+      border: 6px solid #44617b;
+      border-radius: 4px;
+      box-sizing: border-box;
+      @include devices(360) {
+          width: 350px;
+          height:  500px;
+      }
+      @include devices(414) {
+          width: 400px;
+          height:  600px;
+      }
+      @include devices(600) {
+          width: 560px;
+          height:  600px;
+      }
+      @include devices(1000) {
+          width: 900px;
+      }
+      @include devices(1600) {
+          width: 1000px;
+          height: 800px;
+      }
+      &:before, &:after {
+        @include devices(768) {
+            content: '';
+          position: absolute;
+        }
+        
+      }
+      
+    }
+
+  .content-new-detail {
+      height: 280px;
+      @include devices(360) {
+          height:  425px;
+      }
+      @include devices(414) {
+          height:  505px;
+      }
+      @include devices(600) {
+          height:  510px;
+      }
+      @include devices(1600) {
+          height:  710px;
+      }
+      .text {
+        margin-top: 30px;
+        padding-bottom: 100px;
+        padding-left: 25px;
+        padding-right: 25px;
+        // color: #86714e;
+        line-height: 30px;
+        font-family: 'tahoma';
+        font-size: 14px;
+      }
+  }
+
+
+  .close-content {
+    position: absolute;
+    background: url(../images/icon-close-popup.png) no-repeat center center;
+    background-size: 100%;
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    height: 45px;
+    cursor: pointer;
+    z-index: 99;
+    @include devices(480) {
+      right: -20px;
+    }
+    
+  }
+}
+
+
+
+.popup-small {
+  .wrapper-popup {
+    border: 3px solid #400903;
+    border-radius: 5px;
+    height: 370px;
+    transition: all 0.5s;
+    transform: scale(0);
+    @include devices(360) {
+      height: 400px;
+    }
+    @include devices(414) {
+      width: 390px;
+    }
+    @include devices(768) {
+      width: 600px;
+      height: 500px;
+    }
+    .detail-ket-qua, .detail-thong-bao {
+      margin-top: 25px;
+    }
+  }
+}
+
+
+.close-content-full {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+.btn-close {
+  cursor: pointer;
+  margin: 20px auto 0;
+  width: 171px;
+  height: 60px;
+  line-height: 55px;
+  background: url(../images/bg-btn-choise.png) center center / contain no-repeat;
+  font-size: 25px;
+  @include devices(768) {
+    width: 191px;
+    height: 70px;
+    line-height: 65px;
+    font-size: 35px;
+  }
+}

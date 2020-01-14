@@ -1,0 +1,63 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+body {
+    margin: 0;
+    font-family: "vl_booster_nextfy_black";
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: $color_white;
+    // background-color: #bf002c  !important;
+    min-height: 100vh;
+    // height: 2000px;
+    overflow: hidden !important;
+    background: $bg;
+    background-size: cover;
+    background-position: left top;
+    @include max_devices(1023) {
+        
+    }
+    @include max_devices(991) {
+    }
+    @include max_devices(768) {
+    }
+    @include max_devices(750) {
+        
+    }
+    @include max_devices(680) {
+        
+    }
+    @include max_devices(667) {
+        
+    }
+    
+}
+.container {
+  position: relative;
+	width: 100%;
+	margin: 0 auto;
+  @include devices(1000) {
+      width: 1000px;
+  }
+}
+
+
+
+// partials
+// @import "partials/header"
+
+// components
+
+
+@import "components/wheel";
+@import "components/setting";
+@import "components/popup_content";
+@import "components/popup_qua";
+
+// contents
+
+
+// @import "_typo.scss";
+

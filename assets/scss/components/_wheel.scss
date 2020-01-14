@@ -1,0 +1,101 @@
+
+.spin-wheel {
+  .container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .spin-wheel-main {
+    width: 96%;
+    max-width: 752px;
+    height: auto;
+    margin: 0 auto 0;
+    position: relative;
+    @include devices(1024) {
+      width: 60%;
+    }
+    @include devices(1600) {
+      width: 70%;
+    }
+    @include devices(1920) {
+      width: 80%;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      width: 600px;
+      height: 392px;
+      background: url(../images/mouse-left.png) no-repeat;
+      background-size: contain;
+      bottom: -100px;
+      left: -330px;
+      z-index: 9;
+      @include max_devices(1023) {
+        width: 500px;
+        height: 327px;
+        bottom: -150px;
+        left: 0;
+      }
+      @include max_devices(640) {
+        width: 400px;
+        height: 261px;
+        left: -50px;
+      }
+      @include max_devices(360) {
+        width: 300px;
+        height: 196px;
+        left: -20px;
+      }
+    }
+  }
+}
+.spin-wheel-main {
+  
+  .img-wheel {
+    width: 100%;
+    display: block;
+  }
+  .btn-wheel {
+    width: 20%;
+    cursor: pointer;
+    &.rotate-circle {
+      left: 40%;
+      top: 40%;
+      animation: rotate_circle 6s infinite linear;
+    }
+    &:hover {
+      .img-muiten {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  .img-light, .img-light-odd, .img-light-even {
+    width: 100%;
+  }
+  .img-light-odd {
+    animation: display_element 1s infinite ease-in-out;
+  }
+  .img-light-even {
+    animation: display_element 1s infinite ease-in-out;
+    animation-delay: 0.5s;
+  }
+  .img-bg-muiten {
+    width: 28%;
+  }
+  .img-muiten {
+    width: 12%;
+    top: 38%;
+    transition: 0.5s all;
+    &.img-muiten-ani {
+      transform: translate(-50%, -60%);
+    }
+  }
+}
+
+.btn-wheel, .img-light, .img-light-odd, .img-light-even, .img-bg-muiten, .img-muiten {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

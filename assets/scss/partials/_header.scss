@@ -1,0 +1,39 @@
+.header {
+  .logo-link {
+    margin-top: 10px;
+    width: 100px;
+    @include devices(375) {
+      width: 120px;
+    }
+    @include devices(768) {
+      width: 150px;
+    }
+    @include devices(1155) {
+      width: 209px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .link-home {
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 1px 5px;
+    position: relative;
+    top: -12px;
+    @include devices(375) {
+      font-size: 14px;
+    }
+    @include devices(768) {
+      font-size: 15px;
+      padding: 2px 6px;
+    }
+    @include devices(1155) {
+      font-size: 17px;
+      padding: 2px 6px;
+      top: -20px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+#popup-ket-qua {
+	.detail-ket-qua {
+		line-height: 1.2;
+	}
+	.txt-congrat {
+		font-size: 40px;
+		color: #d97815;
+	}
+	.txt-get {
+		font-size: 30px;
+		color: #693c03;
+	}
+	.img-ket-qua {
+		margin: 15px 0;
+		@include devices(768) {
+	    margin-top: 25px;
+	  }
+		img {
+			width: 90%;
+			@include devices(768) {
+		    width: 80%;
+		  }
+		}
+	}
+}

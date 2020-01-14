@@ -1,0 +1,129 @@
+.footer {
+	padding-top: 80px;
+	padding-bottom: 10px;
+    margin-top: -20px;
+	background: $m-bg-footer center top;
+  background-size: cover;
+  @include devices(768) {
+    padding-bottom: 110px;
+  }
+  @include devices(1024) {
+    padding-top: 150px;
+    background:transparent;
+  }
+}
+.link-footer {
+  margin-top: 20px;
+  padding-top: 17px;
+	position: relative;
+	@include devices(1024) {
+   	padding-bottom: 17px;
+	}
+	&:before, &:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		max-width: 669px;
+    height: 17px;
+		background: $border-top-link-footer center center;
+		background-size: contain;
+		top: 0;
+		left: 50%;
+    transform: translateX(-50%);
+	}
+	&:after {
+		display: none;
+		@include devices(1024) {
+	   	display: block; 
+	   	bottom: -17px;
+	    top: inherit;
+		}
+	}
+}
+.hotline-mobile {
+	color: #5c5d5c;
+	font-size: 20px;
+	span {
+		font-size: 40px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+	}
+}
+
+ul.link-privacy {
+	margin-top: 10px;
+	text-align: center;
+	li {
+		display: inline-block;
+		width: 155px;
+		height: 40px;
+		line-height: 40px;
+		background: $bg-link-footer center center;
+		background-size: contain;
+		@include devices(375) {
+      width: 185px;
+	    height: 44px;
+	    line-height: 44px
+		}
+		@include devices(600) {
+      width: 266px;
+	    height: 61px;
+	    line-height: 61px;
+	    margin: 0 5px;
+		}
+		&:hover {
+			background: $bg-link-footer-hover center center;
+			background-size: contain;
+		}
+		a {
+			color: #5c5d5c;
+			font-size: 12px;
+			@include devices(375) {
+	      font-size: 14px;
+			}
+		}
+	}
+}
+#link-hotline-pc {
+	display: none;
+	@include devices(1024) {
+    display: inline-block;
+    position: relative;
+    top: 4px;
+	}
+	span {
+		font-size: 24px;
+    position: relative;
+    top: 2px;
+	}
+	a {
+    position: relative;
+    top: -3px;
+	}
+}
+
+.go-top-mobile {
+	margin-top: 20px;
+	@include devices(768) {
+		position: absolute;
+    right: 5px;
+    top: 65px;
+  }
+	img {
+		width: 55px;
+		@include devices(768) {
+	    width: 86px;
+	  }
+	}
+}
+
+.giay-phep {
+  font-family: 'tahoma';
+  color: #373737;
+  font-size: 15px;
+  margin-top: 15px;
+  @include devices(1024) {
+  	margin-top: 35px;
+	}
+}
