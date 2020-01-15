@@ -233,14 +233,7 @@
 		function spin_wheel() {
 			var adsave = add_random;
 			// console.log("add-save-first" + add_random_save);
-			//so 1
-			//   l0 = 0 = (0 * 1) * 15
-			//   l1 = +15 = (1 * 1) * 15
-			//   l2 = +30 = (2 * 1) * 15
-			//   l3 = +45 = = (3 * 1) * 15
-	
-	
-	
+			
 			var degree_add;
 			if (pos_now == pos_pause) {
 				degree_add = number_circle * 360;
@@ -320,7 +313,8 @@
 				number_random = pos_pause;
 			}
 			
-			add_random = randomAm(Math.round(add_first - 1), Math.round(add_first - 1));
+			// add_random = randomAm(Math.round(add_first - 1), Math.round(add_first - 1));
+			add_random = 0;
 	
 			// console.log('add_random' + add_random);
 	
