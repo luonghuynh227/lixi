@@ -232,7 +232,7 @@
 	
 		function spin_wheel() {
 			var adsave = add_random;
-			console.log("add-save-first" + add_random_save);
+			// console.log("add-save-first" + add_random_save);
 			//so 1
 			//   l0 = 0 = (0 * 1) * 15
 			//   l1 = +15 = (1 * 1) * 15
@@ -265,8 +265,8 @@
 				quaystop(degree_stop, time_spin);
 				add_random_save = add_random;
 			}
-			console.log('pos_now: ' + pos_now);
-			console.log('pos_pause: ' + pos_pause);
+			// console.log('pos_now: ' + pos_now);
+			// console.log('pos_pause: ' + pos_pause);
 		}
 	
 		function quaydeu() {
@@ -322,7 +322,7 @@
 			
 			add_random = randomAm(Math.round(add_first - 1), Math.round(add_first - 1));
 	
-			console.log('add_random' + add_random);
+			// console.log('add_random' + add_random);
 	
 			if (is_start) {
 				
@@ -335,7 +335,7 @@
 				 	timeClickAgain();
 				 	if (pos_pause != 1) {
 				   	showqua(pos_now);
-				   	console.log(img_src + '-' + name_item);
+				   	// console.log(img_src + '-' + name_item);
 				   	$('#popup-ket-qua .img-ket-qua img').fadeIn();
 
 				   	$('#popup-ket-qua .img-ket-qua img').attr('src', img_src);
