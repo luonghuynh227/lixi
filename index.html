@@ -141,7 +141,7 @@
             <p class="t-center f-vl_b_n_black txt-congrat">Chúc mừng</p>
             <p class="t-center f-vl_b_n_black txt-get">bạn đã nhận được</p>
             <p class="t-center img-ket-qua">
-              <img src="favicon.ico" alt="">
+              <img src="" alt="">
             </p>
             <div class="t-center plus-spin f-iciel_soup_of_justice t-shadow-red-orange" style="font-size: 70px;color: #fe903c; display: none;">
               +1 lượt
@@ -303,7 +303,7 @@
 		$('#button').on('click', function () {
 			$('#popup-ket-qua .wrapper-popup').css('transform', 'scale(0)');
 			$('#popup-ket-qua .img-ket-qua img').hide();
-			// $('#popup-ket-qua .img-ket-qua img').attr('src', 'favicon.ico');
+			$('#popup-ket-qua .img-ket-qua img').attr('src', '');
 	   	$('#popup-ket-qua .plus-spin').hide();
 
 			var number_random;
@@ -333,8 +333,10 @@
 				   	$('#popup-ket-qua .img-ket-qua img').show();
 
 				   	$('#popup-ket-qua .img-ket-qua img').attr('src', img_src);
-				   	$('#popup-ket-qua').fadeIn();
-				   	$('#popup-ket-qua .wrapper-popup').css('transform', 'scale(1)');
+				   	setTimeout(function () {
+					   	$('#popup-ket-qua').fadeIn();
+					   	$('#popup-ket-qua .wrapper-popup').css('transform', 'scale(1)');
+					  }, 500);
 				 	} else {
 				 		showqua(pos_now);
 				   	$('#popup-ket-qua .plus-spin').show();
